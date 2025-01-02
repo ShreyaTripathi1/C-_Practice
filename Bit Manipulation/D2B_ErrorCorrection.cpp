@@ -1,4 +1,13 @@
-//The previous code of decimal to binary conversion would not work properly when the decimal input is binary like, eg: 1101. 
+//The previous code of decimal to binary conversion would not work properly when the decimal input is long, eg: 1101. 
+//    Integer Overflow !
+//    When place becomes very large, it exceeds the range of int (maximum value = 2,147,483,647) and causes integer overflow. 
+//    Once overflow happens, place stores garbage values or negative values, leading to the wrong output for the binary number.
+
+
+//   Key Fixes:
+//  ->Store binary as a string instead of an integer to avoid size limitations.
+//  ->Prepend digits (to_string(remainder) + binary) to maintain correct order without relying on place.
+//  ->Removed the multiplication by 10, which was logically incorrect for binary representation.
 
 #include <iostream>
 using namespace std;
