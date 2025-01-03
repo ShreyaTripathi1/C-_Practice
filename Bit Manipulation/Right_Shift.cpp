@@ -1,3 +1,5 @@
+// This code handles arithmetic right shift for negative numbers to preserve the sign bit (MSB—Most Significant Bit).
+
 #include <iostream>
 using namespace std;
 
